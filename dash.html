@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: lightblue;
+}
+
+
+</style>
+</head>
+<body>
+<div class="header">Australasia</div>
+<div class="sidenav">
+  <a href="#USERS"><i class="USERS"></i> USERS</a>
+  <a href="#GLOBAL ACCESS"><i class="GLOBAL ACCESS"></i> GLOBAL ACCESS</a>
+  <a href="#PROCESSING OFFICE"><i class="PROCESSING OFFICE"></i> PROCESSING OFFICE</a>
+  <a href="#REPRESENTING INSTITUTIONS"><i class="REPRESENTING INSTITUTIONS"></i> REPRESENTING INSTITUTIONS</a>
+  <a href="#COUNSELLOR TOOLS"><i class="COUNSELLOR TOOLS"></i> COUNSELLOR TOOLS</a>
+  <button class="branch-btn">BRANCH OFFICE
+    <i class="branch-down"></i>
+  </button>
+  <div class="branch-container">
+    <a href="#">NEW BRANCH</a>
+    <a href="#">LIST OF BRANCHES</a>
+    <a href="#">Link 3</a>
+  </div>
+   <a href="#REPORTS"><i class="REPORTS"></i> REPORTS</a>
+  <a href="#LEAD MANAGEMENT"><i class="LEAD MANAGEMENT"></i> LEAD MANAGEMENT</a>
+  <a href="#FINANCE MANAGEMENT"><i class="FINANCE MANAGEMENT"></i> FINANCE MANAGEMENT</a>
+  <a href="#TASK MANAGEMENT"><i class="TASK MANAGEMENT"></i> TASK MANAGEMENT</a>
+  <a href="#ANNOUNCEMENT MANAGEMENT"><i class="ANNOUNCEMENT MANAGEMENT"></i> ANNOUNCEMENT MANAGEMENT</a>
+</div>
+
+<div class="main">
+  
+  
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var branch = document.getElementsByClassName("branch-btn");
+var i;
+
+for (i = 0; i < branch.length; i++) {
+  branch[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var branchContent = this.nextElementSibling;
+  if (branchContent.style.display === "block") {
+  branchContent.style.display = "none";
+  } else {
+  branchContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 
